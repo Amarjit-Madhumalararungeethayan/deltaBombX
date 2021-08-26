@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/viii"
+    tools:context=".Home">
+
+
+    <com.example.bombx.Wired
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:id="@+id/canva"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:fontFamily="@font/bombfont"
+        android:textSize="100dp"
+        android:textColor="#808080"
+        android:id="@+id/timer"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Solve Before the Time Runs Out"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/bombfont"
+        android:textSize="30dp"
+        android:textColor="#808080"
+        android:id="@+id/desc"
+        />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:fontFamily="@font/bombfont"
+        app:layout_constraintBottom_toTopOf="@id/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#808080"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:rotation="-90"
+        android:text="Choose a wire as base and then click on others to swap"
+        android:textColor="@color/black"
+        android:fontFamily="@font/moon"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="170dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
