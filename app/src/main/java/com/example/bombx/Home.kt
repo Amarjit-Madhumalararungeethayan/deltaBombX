@@ -45,6 +45,7 @@ class Home : AppCompatActivity() {
                 binding.desc.text = "Solve Before the Time Runs Out"
 
                 if(win){
+                    newCount()
                     binding.desc.text = "You Win"
                 }
 
@@ -58,11 +59,11 @@ class Home : AppCompatActivity() {
                 if(!win){
                     binding.desc.text = "Game Over"
                     vibrateNow()
+                    val intent = Intent(this@Home, Home::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(R.anim.up, R.anim.nothing)
                 }
 
-                val intent = Intent(this@Home, Home::class.java)
-                startActivity(intent)
-                overridePendingTransition(R.anim.up, R.anim.nothing)
 
 
             }
@@ -70,6 +71,22 @@ class Home : AppCompatActivity() {
 
         }
         countDown.start()
+    }
+
+    private fun newCount() {
+            val countDown: CountDownTimer
+            countDown = object : CountDownTimer(1000, 1000) {
+                override fun onTick(millisecsToFinish: Long) {}
+                override fun onFinish() {
+                    val intent = Intent(this@Home, Home::class.java)
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.up, R.anim.nothing)
+
+                }
+
+
+            }
+            countDown.start()
     }
 
     private fun vibrateNow() {
